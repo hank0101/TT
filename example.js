@@ -2,7 +2,7 @@ $(document).ready(function () {
   $('#get-data').click(function () {
     var showData = $('#show-data');
 
-    $.getJSON('example.json', function (data) {
+    $.getJSON('https://github.com/hank0101/TT/example.json', function (data) {
       console.log(data);
 
       var items = data.CRAWL_RESULT.map(function (item) {
