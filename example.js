@@ -1,8 +1,9 @@
 $(document).ready(function () {
   $('#get-data').click(function () {
     var showData = $('#show-data');
+    let github_link = 'https://hank0101.github.io/TT/example.json';
 
-    $.getJSON('https://hank0101.github.io/TT/example.json?callback=?', function (data) {
+    $.getJSON(github_link, function (data) {
       console.log(data);
 
       var items = data.CRAWL_RESULT.map(function (item) {
