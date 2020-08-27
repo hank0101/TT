@@ -6,7 +6,7 @@ $(document).ready(function () {
     $.getJSON(github_link, function (data) {
       console.log(data);
 
-      var items = data.CRAWL_RESULT.map(function (item) {
+      var items = data.items.map(function (item) {
         return item.key + ': ' + item.value;
       });
 
