@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script runat=server language=jscript>
+function pageHitCounter(){
+	fso = new ActiveXObject("Scripting.FileSystemObject");
+	counterFile = Request.ServerVariables("PATH_TRANSLATED") + ".cnt";	// 找出記數檔案在硬碟中的實際位置
+	fid = fso.OpenTextFile(counterFile, 1);			// 開啟唯讀檔案
+	count = fid.ReadLine();					// 從檔案讀出記數資料
+	fid.Close();						// 關閉檔案
+	count++;						// 增加記數資料
+	fid = fso.OpenTextFile(counterFile, 2);			// 開啟檔案並允許寫入
+	fid.WriteLine(count);					// 寫入檔案
+	fid.Close();						// 關閉檔案
+	return(count);
+}
+</script>
+
+</head>
+   <body>
+    <button onclick="pageHitCounter()">Click me</button> 
+   </body>
+
+</html>
+
