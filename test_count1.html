@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript" src="jquery-2.1.1.js">
+  </script>
+     <style>
+         ul{
+             position: absolute;
+             z-index: 1000;
+             height: 30px;
+
+
+             overflow: hidden;
+             list-style-type: none;
+         }
+         ul li{
+
+
+             float:right;
+             margin: 0 10px;
+         }
+         .item{
+            border: solid thin #808080;
+            text-align: center;
+             display: block;
+
+
+             width: 18px;
+             height: 28px;
+         }
+        .item em{
+
+
+            font-family: "Times New Roman",Georgia,Serif;
+        ;
+            font-size: 18pt;
+            font-weight: bold;
+            color: #ff0000;
+            background-color: #ffffff;
+        }
+     </style>
+  <script type="text/javascript">
+      var total,total_arr1;
+      function init() {
+          total = 100000000;
+          total_arr1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+          for (var k = 0; k < 9; k++) {
+              for (var j = 1; j < 10; j++) {
+
+
+                  $("em[t=" + j + "]:eq(" + k + ")").fadeOut();
+              }
+          }
+      }
+      function flush() {
+
+
+          var one = total % 10;                        //個位
+          var two = Math.floor(total % 100 / 10);     //十位
+          var thr = Math.floor(total % 1000 / 100);           //百位
+          var fou = Math.floor(total % 10000 / 1000);            //千位
+          var fiv = Math.floor(total % 100000 / 10000);          //萬位
+          var six = Math.floor(total % 1000000 / 100000);          //十萬位
+          var sev = Math.floor(total % 10000000 / 1000000);              //
+          var eig = Math.floor(total % 100000000 / 10000000);
+          var nig = Math.floor(total % 1000000000 / 100000000);
+          var arr = [one, two, thr, fou, fiv, six, sev, eig, nig];      //用一陣列將這九個數字表示的九個位存起來,從左至右依次個位。。。
+
+
+
+
+          for (var i = 0; i < 9; i++) {
+
+
+              switch (arr[i]) {
+                  case 1:
+                       while(total_arr1[i]!=1){                           //用arr1儲存的當前位的數字,當與新的數字不同時,從當前數字開始依次遞增翻轉數字,直到匹配時停止遍歷
+                           $("em[t="+total_arr1[i]+"]:eq("+i+")").fadeOut();
+                           total_arr1[i]=(total_arr1[i]+1)%10;
+                           $("em[t="+total_arr1[i]+"]:eq("+i+")").slideToggle();
+                       }
+
+
+                      break;
+                  case 2:
+                      while(total_arr1[i]!=2){
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").fadeOut();
+                          total_arr1[i]=(total_arr1[i]+1)%10;
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").slideToggle();
+                      }
+                      break;
+                  case 3:
+                      while(total_arr1[i]!=3){
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").fadeOut();
+                          total_arr1[i]=(total_arr1[i]+1)%10;
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").slideToggle();
+                      }
+                      break;
+                  case 4:
+                      while(total_arr1[i]!=4){
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").fadeOut();
+                          total_arr1[i]=(total_arr1[i]+1)%10;
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").slideToggle();
+                      }                                //將當次的數字編號儲存進陣列arr1[i]中
+                      break;
+                  case 5:
+                      while(total_arr1[i]!=5){
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").fadeOut();
+                          total_arr1[i]=(total_arr1[i]+1)%10;
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").slideToggle();
+                      }
+                      break;
+                  case 6:
+                      while(total_arr1[i]!=6){
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").fadeOut();
+                          total_arr1[i]=(total_arr1[i]+1)%10;
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").slideToggle();
+                      }
+                      break;
+                  case 7:
+                      while(total_arr1[i]!=7){
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").fadeOut();
+                          total_arr1[i]=(total_arr1[i]+1)%10;
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").slideToggle();
+                      }
+                      break;
+                  case 8:
+                      while(total_arr1[i]!=8){
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").fadeOut();
+                          total_arr1[i]=(total_arr1[i]+1)%10;
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").slideToggle();
+                      }
+                      break;
+                  case 9:
+                      while(total_arr1[i]!=9){
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").fadeOut();
+                          total_arr1[i]=(total_arr1[i]+1)%10;
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").slideToggle();
+                      }
+                      break;
+                  case 0:
+                      while(total_arr1[i]!=0){
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").fadeOut();
+                          total_arr1[i]=(total_arr1[i]+1)%10;
+                          $("em[t="+total_arr1[i]+"]:eq("+i+")").slideToggle();
+                      }
+                      break;
+                  default :
+                      break;
+              }
+          }
+      }
+
+
+      function add(){
+          total++;
+          if(total==999999999){
+              total=0;
+          }
+      }
+
+
+   $(document).ready(function(){
+        init();
+       window.setInterval('add()',100);
+      var result=window.setInterval('flush()',2000);
+  });
+  </script>
+ </head>
+ <body>
+
+
+ <ul>
+ <li class="item">
+     <cite>
+  <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+   <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+         </cite>
+  </li>
+  <li class="item">
+      <cite>
+  <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+   <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+      </cite>
+  </li>
+  <li class="item">
+      <cite>
+  <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+   <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+ </cite>
+  </li>
+     <li> <span>,</li>
+     <li class="item">
+         <cite>
+             <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+             <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+         </cite>
+     </li>
+     <li class="item">
+         <cite>
+             <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+             <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+         </cite>
+     </li>
+     <li class="item">
+         <cite>
+             <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+             <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+         </cite>
+     </li>
+     <li> , </li>
+     <li class="item">
+         <cite>
+             <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+             <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+         </cite>
+     </li>
+     <li class="item">
+     <cite>
+         <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+         <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+     </cite>
+ </li>
+     <li class="item">
+     <cite>
+         <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+         <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+     </cite>
+ </li>
+</ul>
+
+
+ </body>
+</html>   
