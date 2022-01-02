@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="老程式設計師">
+  <meta name="author" content="">
+
+  <title>老程式設計師</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+  
+  <script src="js/w3.js"></script>
+
+
+  
+
+</head>
+
+<body>
+	
+<div w3-include-html="nav.html"></div>
+
+  	
+  
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>資料庫連接</h1>
+            <span class="subheading">方法百百種</span>
+            <span class="meta">Posted
+              on Jan 2, 2022</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>自己一直從事的都是資料庫的設計與應用，但其實底層的連接方法，過去都不太去深究。</p>
+
+          <p>最近突然對各種連接的方法有了興趣，於是就試著做一些簡單的程式來連接看看。</p>
+
+          <p>基本上粗淺的連接方法，譬如說直接用java寫程式，將連線的相關資訊都寫上並將對應的jar檔放入相關路徑，那就很簡單可使用。</p>
+          <p>但基本上開發並不會用這麼粗淺的架構，因為資料庫的帳號／密碼都寫在java code上，很容易被駭，且測試與上線時，不就要寫二套程式，所以一般是不會使用。</p>
+          <p>基本上資料庫的連接都是寫在設定檔內，不同的server內會有不同的設計檔，也就能控制連接到正式機或測試機的資料庫。</p>
+
+		  <h2 class="section-heading">了解整體架構，系統會更順𣈱</h2>
+		  <p>所以在系統開發前如何連接資料庫算是一項非常重要的一件事，好的架構師，能減少很多開發時間。</p>
+<p>而我現在就是要開始去研究各種架構的好壞，但一開始就遇到了一些挫折，之前若遇到挫折，就會不眠不休的用各種方法暴力解決，結果常是解決了，但因沒循序漸進地去了解各層面，所以也常是一知半解，並無法達到妥善運用的境界。</p>
+<p>但我希望在這一個新的年度裡，我能用比較合理的時間來解決問題，比如說我遇到jndi的問題，那我何不預計自己有一個星期的時間去深入研究並解決問題，只要時間夠，基本上沒有什麼解決不了的問題。</p>
+
+	  <p>以上，是我對自己專業的另一項期許。</p>	
+	<p></p>
+        <p></p>
+	<p></p>
+	<p></p>
+<p> </p>
+<p> </p>
+          
+
+          <blockquote class="blockquote"></blockquote>
+
+          <p></p>
+
+          <h2 class="section-heading"></h2>
+
+          <p></p>
+
+          <a href="#">
+            <img class="img-fluid" src="img/post23-1.png" alt="">
+          </a>
+          <span class="caption text-muted"></span>
+          
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Your Website 2022</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+  <script>
+    w3.includeHTML();
+</script>
+
+
+</body>
+
+</html>
+
+
